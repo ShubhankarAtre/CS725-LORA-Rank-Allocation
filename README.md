@@ -1,5 +1,9 @@
 ONLY FOR MONDAY's SUBMISSION WINDOW -> WILL UPDATE ON TUESDAY FOR NEXT WEEK
+
+
 Plan of action for first sprint:
+
+
 (Reading LoRA Paper, Understanding LLM, Transformers, Attention Framework, PEFT etc is an ongoing effort and must be done in parallel with the engineering tasks to ensure we can explain what we are doin on engineering side
 and why exactly is the behaviour a certain way etc)
 
