@@ -1,0 +1,36 @@
+baseline_yaml = """model: Qwen/Qwen2.5-0.5B
+dataset: openai/gsm8k
+dataset_config: main
+
+seed: 42
+train_examples: 1000
+validation_examples: 100
+max_sequence_length: 512
+
+lora:
+	rank: 8
+	alpha: 16
+	dropout: 0.05
+	target_modules:
+	  - q_proj
+	  - k_proj
+	  - v_proj
+	  - o_proj
+	alpha_over_rank: 2.0
+
+training:
+	optimizer: AdamW
+	learning_rate: 0.0002
+	max_steps: 100
+	batch_size: 2
+	gradient_accumulation_steps: 1
+
+evaluation:
+	metric: validation_loss
+	official_test_used_during_training: false
+"""
+
+with open(f"{PROJECT_DIR}/Configs/baseline.yaml","w") as f:
+	f.write(baseline.yaml)
+
+print("Created Configs/baseline.yaml")
